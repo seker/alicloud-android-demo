@@ -1,7 +1,49 @@
-include ':man_android_demo', ':devops_android_demo',
-        ':httpdns_api_demo',
-        ':httpdns_android_demo',
-        ':mpush_android_demo',
-        ':feedback_android_demo',
-        ':ha_android_demo',
-        ':hotfix_android_demo'
+pluginManagement {
+    repositories {
+        mavenLocal()
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'   // central仓和jcenter仓的聚合仓
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/gradle-plugin'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/google'
+        }
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        jcenter()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenLocal()
+        maven {
+            url 'https://s01.oss.sonatype.org/content/repositories/releases/'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'   // central仓和jcenter仓的聚合仓
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/gradle-plugin'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/google'
+        }
+        maven { url 'https://developer.huawei.com/repo/'}
+        google()
+        mavenCentral()
+        jcenter()
+    }
+}
+
+include ':man_android_demo'
+include ':devops_android_demo'
+include ':httpdns_api_demo'
+include ':httpdns_android_demo'
+include ':mpush_android_demo'
+include ':feedback_android_demo'
+include ':ha_android_demo'
+include ':hotfix_android_demo'
