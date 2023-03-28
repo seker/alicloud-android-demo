@@ -13,12 +13,19 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
-        jcenter()
+//        jcenter()
     }
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+//        maven {
+//            name = 'curRepo'
+//            url = "file://${rootDir}/ha_android_demo/libs"
+//        }
+        flatDir {
+            dirs 'ha_android_demo/libs'
+        }
         mavenLocal()
         maven {
             url 'https://s01.oss.sonatype.org/content/repositories/releases/'
@@ -35,7 +42,7 @@ dependencyResolutionManagement {
         maven { url 'https://developer.huawei.com/repo/'}
         google()
         mavenCentral()
-        jcenter()
+//        jcenter()
     }
 }
 
